@@ -1,4 +1,10 @@
-// Parses the most recent 10 email threads and extracts relevant information from each message.
+// parser.js
+// Parses email threads and extracts relevant information for summarization.
+
+/**
+ * Parses the most recent 10 email threads and extracts sender, subject, and content.
+ * Calls summarizeText to generate a summary for each message.
+ */
 function parseEmails() {
   var threads = GmailApp.getInboxThreads(0, 10); // Fetches the most recent 10 threads
   threads.forEach(function(thread) {

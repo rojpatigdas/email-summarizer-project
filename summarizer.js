@@ -1,4 +1,11 @@
-// Summarizes the given text using the OpenAI API and logs the summary.
+// summarizer.js
+// Summarizes email content using the OpenAI API and logs the summary.
+// Configure your OpenAI API key securely (see code comments).
+
+/**
+ * Summarizes the given text using the OpenAI API and logs the summary.
+ * @param {string} text - The text to summarize
+ */
 function summarizeText(text) {
   var apiUrl = 'https://api.openai.com/v1/completions'; // OpenAI API endpoint
   // TODO: Load your OpenAI API key from a secure source (e.g., PropertiesService or environment variable). Do not commit real API keys to version control.

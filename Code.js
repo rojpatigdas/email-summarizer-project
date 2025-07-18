@@ -1,10 +1,16 @@
+// Code.js
 // Fetches the most recent 10 email threads and logs sender, subject, and body for each message.
+// Used for email summarization and processing workflows.
+
+/**
+ * Fetches the most recent 10 email threads and logs details for each message.
+ * Can be extended to process or store email data as needed.
+ */
 function fetchEmails() {
   var threads = GmailApp.getInboxThreads(0, 10); // Fetches the most recent 10 threads
   var x = 0;
   threads.forEach(function(thread) {
     var messages = thread.getMessages();
-
     messages.forEach(function(message) {
       var sender = message.getFrom(); // Get sender's email address
       var subject = message.getSubject(); // Get email subject
